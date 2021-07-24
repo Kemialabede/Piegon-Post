@@ -22,7 +22,7 @@ const PopularArticles = () => {
     return (
         <div className={styles.Container}>
             <div className={styles.Heading}>
-                <h1>NY Times Most Popular Articles</h1>
+                <h1>PiGEON</h1>
             </div>
             {loader ? (
                 <div className={styles.Loader}>

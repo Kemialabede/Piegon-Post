@@ -7,9 +7,9 @@ import style from './../../styles/Common.module.scss';
 
 const ArticleDetails = () => {
     const router = useRouter();
-    const { id } = router && router.query;
     const [article, setArticle] = useState([]);
     const [loader, setLoader] = useState();
+    const data = router && router.query;
 
     useEffect(() => {
         axios
@@ -24,16 +24,17 @@ const ArticleDetails = () => {
     return (
         <div>
             <div className={styles.Header}>
-                <a href="/">NY TIMES MAGAZINE</a>
+                <a href="/">PIGEON</a>
             </div>
             {loader ? (
                 <div className={style.Loader}>
                     <Spinner size={70} />
                 </div>
             ) : (
-                article &&
+                <div data-test-id="testArticle">
+                {article &&
                 article.map((item, index) => {
-                    if (Number(id) === Number(item.id))
+                    if (Number(data.id) === Number(item.id))
                         return (
                             <div className={styles.Wrapper}>
                                 <h2 className={styles.Title}>{item.title}</h2>
@@ -74,6 +75,8 @@ const ArticleDetails = () => {
                             </div>
                         );
                 })
+            }
+            </div>
             )}
         </div>
     );

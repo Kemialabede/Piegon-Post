@@ -6,26 +6,5 @@ describe('SearchBox ', () => {
         const { result } = renderHook(() => PopularArticles());
 
         expect(result.current.props.children[1].children).toBe();
-        console.log(result.all[0].props.children[1]._owner);
     });
 });
-
-jest.mock('next/router', () => ({
-    useRouter() {
-        return {
-            route: '',
-            pathname: '',
-            query: '',
-            asPath: ''
-        };
-    }
-}));
-
-const useRouter = jest.spyOn(require('next/router'), 'useRouter');
-
-useRouter.mockImplementation(() => ({
-    route: '/article',
-    pathname: '/article',
-    query: 56677868789899,
-    asPath: ''
-}));
