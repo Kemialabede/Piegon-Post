@@ -1,0 +1,13 @@
+.Wrapper{
+    width: 500px;
+    height: 50px;
+    border: 1px solid black;
+    justify-content: space-between;
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    margin: 30px auto  0 auto;
+    input{
+        width: 300px;
+    }
+};

@@ -1,0 +1,92 @@
+@import "../styles/mixins.scss";
+
+.Heading{
+    background-image: url("/assets/images/collage-9.png");
+    height: 200px;
+    width: auto;
+    margin-top: -35px;
+    color: white;
+    h1{
+        color: white;
+        position: relative;
+        top: 75px;
+        text-align: center;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 800;
+        @include mQ(600px) {
+            font-size: 34px;
+          }
+    }
+}
+
+.articleContainer{
+    padding: 50px;
+    @include mQ(600px) {
+        padding: 20px;
+      }
+}
+.Container{
+    width: 100%;
+    background: white;
+    color: black;
+}
+
+.articleWrapper{
+    display: flex;
+    align-items: center;
+    width: 650px;
+    margin: 0 auto 50px;
+    border: 3px solid black;
+    padding: 20px;
+    border-radius: 50px;
+    @include mQ(600px) {
+        width: auto;
+        display: block;
+      }
+}
+
+.authorInfo{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: grey;
+    span{
+        margin-left: 5px;
+    }
+    img{
+        margin-right: 0 10px;
+    }
+}
+.Caption{
+    margin-left: 20px;
+    max-width: 420px;
+    line-height: 32px;
+    font-size: 16px;
+    p{
+        margin: 0;
+    }
+}
+.Title{
+    font-size: 30px;
+    font-weight: 800px;
+}
+.readMore{
+    cursor: pointer;
+    font-weight: 600;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.innerWrap{
+    display: flex;
+    align-items: center;
+}
+.arrowIcon{
+    display: flex;
+    margin-left: 20px;
+    justify-content: flex-end;
+    cursor: pointer
+}
