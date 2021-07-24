@@ -24,7 +24,7 @@ const ArticleDetails = () => {
     return (
         <div>
             <div className={styles.Header}>
-                <a href="/">PIGEON</a>
+                <a href="/">NY TIMES</a>
             </div>
             {loader ? (
                 <div className={style.Loader}>

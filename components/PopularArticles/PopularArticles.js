@@ -22,7 +22,7 @@ const PopularArticles = () => {
     return (
         <div className={styles.Container}>
             <div className={styles.Heading}>
-                <h1>PiGEON</h1>
+                <h1>NY Times</h1>
             </div>
             {loader ? (
                 <div className={styles.Loader}>
@@ -36,7 +36,7 @@ const PopularArticles = () => {
                                 <div className={styles.innerWrap}>
                                     <PhotoCard src={Image[index][0]} />
                                     <div className={styles.Caption}>
-                                        <h2 className={styles.Title}>{item.title}</h2>
+                                        <h2 className={styles.Title}>{item.title}. <Link href={`/article/${item.id}`}><span className={styles.readMore}>Read More...</span></Link></h2>
                                         <p className={styles.authorInfo}>
                                             {item.byline}{' '}
                                             <span>
