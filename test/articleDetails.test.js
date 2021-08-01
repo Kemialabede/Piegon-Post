@@ -5,8 +5,8 @@ import { cleanup, screen } from '@testing-library/react';
 
 afterEach(cleanup);
 
-describe('ResultsProductPage', () => {
-    it('renders - display mode list', () => {
+describe('ArticleDetails', () => {
+    it('<ArticleDetails /> ', () => {
         renderHook(() => ArticleDetails());
         const Text = screen.queryByTestId('testArticle');
         expect(Text).toBeDefined();

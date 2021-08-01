@@ -15,3 +15,25 @@
     justify-content: center;
     padding-top: 100px;
 }
+.PaginationWrapper{
+    ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        width: 250px;
+        margin: auto;
+        font-size: 22px;
+        li{
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+    margin-bottom: 35px;
+}
+
+
+.isActive{
+    color: white;
+    background: black;
+}

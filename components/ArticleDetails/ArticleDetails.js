@@ -32,51 +32,50 @@ const ArticleDetails = () => {
                 </div>
             ) : (
                 <div data-test-id="testArticle">
-                {article &&
-                article.map((item, index) => {
-                    if (Number(data.id) === Number(item.id))
-                        return (
-                            <div className={styles.Wrapper}>
-                                <h2 className={styles.Title}>{item.title}</h2>
-                                <img
-                                    src={Image[index][0]}
-                                    width="auto"
-                                    height="auto"
-                                    alt="article"
-                                />
-                                <p className={styles.Abstract}>{item.abstract}</p>
-                                <ul className={styles.List}>
-                                    {item.des_facet.map((i) => (
-                                        <li key={i}>{i}</li>
-                                    ))}
-                                </ul>
-                                <p>
-                                    For more information.
-                                    <a href={item.url} style={{ color: 'blue' }}>
-                                        Click here
-                                    </a>
-                                </p>
-                                <div className={styles.authorInfoWrapper}>
-                                    <div className={styles.authorInfo}>
+                    {article &&
+                        article.map((item, index) => {
+                            if (Number(data.id) === Number(item.id))
+                                return (
+                                    <div className={styles.Wrapper}>
+                                        <h2 className={styles.Title}>{item.title}</h2>
+                                        <img
+                                            src={Image[index][0]}
+                                            width="auto"
+                                            height="auto"
+                                            alt="article"
+                                        />
+                                        <p className={styles.Abstract}>{item.abstract}</p>
+                                        <ul className={styles.List}>
+                                            {item.des_facet.map((i) => (
+                                                <li key={i}>{i}</li>
+                                            ))}
+                                        </ul>
                                         <p>
-                                            Source:
-                                            {item.source}
+                                            For more information.
+                                            <a href={item.url} style={{ color: 'blue' }}>
+                                                Click here
+                                            </a>
                                         </p>
-                                        <p>
-                                            By:
-                                            {item.byline}
-                                        </p>
-                                        <p>
-                                            Published:
-                                            {item.published_date}
-                                        </p>
+                                        <div className={styles.authorInfoWrapper}>
+                                            <div className={styles.authorInfo}>
+                                                <p>
+                                                    Source:
+                                                    {item.source}
+                                                </p>
+                                                <p>
+                                                    By:
+                                                    {item.byline}
+                                                </p>
+                                                <p>
+                                                    Published:
+                                                    {item.published_date}
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        );
-                })
-            }
-            </div>
+                                );
+                        })}
+                </div>
             )}
         </div>
     );
